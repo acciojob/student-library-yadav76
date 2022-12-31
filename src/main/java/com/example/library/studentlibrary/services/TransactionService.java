@@ -46,6 +46,12 @@ public class TransactionService {
 
         //Note that the error message should match exactly in all cases
 
+        Book book = bookRepository5.findById(bookId).get();
+
+        if(book.isPresent() && book.get().isAvailable()) {
+            
+        }
+
        return null; //return transactionId instead
     }
 
